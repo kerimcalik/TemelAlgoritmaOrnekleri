@@ -185,6 +185,7 @@ namespace TemelAlgoritmaOrnekleri
             Console.WriteLine("================================================");
             Console.WriteLine("Vücut Kitle İndeksiniz: {0}", vki);
 
+            
             if (vki < 18)
             {
                 Console.WriteLine("Zayıf");
@@ -207,49 +208,7 @@ namespace TemelAlgoritmaOrnekleri
             }
         }
 
-        private static void SayiTahmini()
-        {
-            Random rastgele = new Random();
-            int enKucuk = 0, enBuyuk = 100;
-            int tahmin, sayi = rastgele.Next(enBuyuk);
-            int hak = 5;
-
-            while (true)
-            {
-                Console.WriteLine("\n\n" + hak-- + " hakkınız var.");
-
-                if (hak < 0)
-                {
-                    Console.WriteLine("KAYBETTİNİZ! Tutulan sayı: " + sayi);
-                    break;
-                }
-
-                Console.Write(enKucuk + " ile " + enBuyuk + " ARASI BİR SAYI GİRİNİZ: ");
-
-                tahmin = Convert.ToInt32(Console.ReadLine());
-
-                if (tahmin > sayi)
-                {
-                    if (tahmin < enBuyuk)
-                    {
-                        enBuyuk = tahmin;
-                    }
-                }
-                else if (tahmin < sayi)
-                {
-                    if (tahmin > enKucuk)
-                    {
-                        enKucuk = tahmin;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("TEBRİKLER!");
-                    break;
-                }
-
-            }
-        }
+        
 
         static void Main(string[] args)
         {
