@@ -146,20 +146,20 @@ namespace TemelAlgoritmaOrnekleri
 
             f1 = n;
 
-            for (int i = n - 1; i >= 1; i--)
+            for (int i = n; i >= 1; i--)
             {
                 f1 *= i;
             }
             
             f2 = r;
-            for (int i = r - 1; i >= 1; i--)
+            for (int i = r; i >= 1; i--)
             {
                 f2 *= i;
             }
 
             f3 = n - r;
 
-            for (int i = f3 - 1; i >= 1; i--)
+            for (int i = f3; i >= 1; i--)
             {
                 f3 *= i;
             }
@@ -210,6 +210,132 @@ namespace TemelAlgoritmaOrnekleri
 
         
 
+        static void KararYordamlari1()
+        {
+            int deger = 10;
+
+            if (deger == 2)
+            {
+                Console.WriteLine("eşit değildir");
+            }
+            else if (deger == 3)
+            {
+                Console.WriteLine("eşit değildir");
+            }
+            else if (deger == 4)
+            {
+                Console.WriteLine("eşit değildir");
+            }
+            else if (deger == 1)
+            {
+                Console.WriteLine("eşittir");
+            }
+            else
+            {
+                Console.WriteLine("bilmiyorum");
+            }
+        }
+
+        static void KararYordamlari2()
+        {
+            int deger1 = 1;
+            int deger2 = 2;
+            int deger3 = 3;
+
+            if (deger1 == 1 && deger2 == 2)
+            {
+
+            }
+
+            if (deger1 == 1 || (deger2 == 2 && deger3 == 4))
+            {
+                Console.WriteLine("doğru");
+            }
+            else
+            {
+                Console.WriteLine("yanlış");
+            }
+        }
+
+        
+
+        static void Donguler()
+        {
+            // Tekrarlayan ifadeler
+            /*
+            Console.WriteLine(1);
+            Console.WriteLine(2);
+            Console.WriteLine(3);
+            Console.WriteLine(4);
+            Console.WriteLine(5);
+            */
+
+            int sayi = 1;
+            sayi = sayi + 1;
+            sayi += 1;
+            sayi++;
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i > 5)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.Write("*");
+                    continue;
+                }
+
+                //Console.WriteLine(i);
+            }
+
+            int j = 0;
+
+            while (j < 10)
+            {
+                j = j + 1;
+                Console.WriteLine("While döngüsü: " + j);
+            }
+
+            int k = 10;
+
+            do
+            {
+                k++;
+                Console.WriteLine("do..while döngüsü: " + k);
+            } while (k < 1);
+
+            for (int x = 1; x < 1; x++)
+            {
+                Console.WriteLine("for döngüsü: " + x);
+            }
+
+            string[] ogeler = new string[] { "elma", "armut" };
+
+            foreach (var oge in ogeler)
+            {
+                if (oge == "armut")
+                {
+                    Console.WriteLine(oge);
+                }
+
+            }
+
+        }
+
+        static void CiftSayiYazdir()
+        {
+            for (int i = 100; i > 0; i--)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        
         static void Main(string[] args)
         {
             //UcgeninAlani();
@@ -221,7 +347,21 @@ namespace TemelAlgoritmaOrnekleri
             //SayiTahmini();
             //VkiBulma();
 
-            Console.ReadKey();
+            int deger1 = 1;
+            int deger2 = 2;
+
+            if (deger1 == 1)
+            {
+                Console.Write("kilo değerini gir");
+            }
+            */
+
+            Donguler();
+
+
+            Console.SetCursorPosition(10, 20);
+
+            Console.Read();
         }
     }
 }
